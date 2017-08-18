@@ -1,0 +1,9 @@
+C:\Users\abowers\source\Repos\PhilameterAPI\PhilameterAPI\PhilameterAPI\bin\Debug\netcoreapp1.1\PhilameterAPI.deps.json
+C:\Users\abowers\source\Repos\PhilameterAPI\PhilameterAPI\PhilameterAPI\bin\Debug\netcoreapp1.1\PhilameterAPI.runtimeconfig.json
+C:\Users\abowers\source\Repos\PhilameterAPI\PhilameterAPI\PhilameterAPI\bin\Debug\netcoreapp1.1\PhilameterAPI.runtimeconfig.dev.json
+C:\Users\abowers\source\Repos\PhilameterAPI\PhilameterAPI\PhilameterAPI\bin\Debug\netcoreapp1.1\PhilameterAPI.dll
+C:\Users\abowers\source\Repos\PhilameterAPI\PhilameterAPI\PhilameterAPI\obj\Debug\netcoreapp1.1\PhilameterAPI.csprojResolveAssemblyReference.cache
+C:\Users\abowers\source\Repos\PhilameterAPI\PhilameterAPI\PhilameterAPI\obj\Debug\netcoreapp1.1\PhilameterAPI.AssemblyInfo.cs
+C:\Users\abowers\source\Repos\PhilameterAPI\PhilameterAPI\PhilameterAPI\bin\Debug\netcoreapp1.1\PhilameterAPI.pdb
+C:\Users\abowers\source\Repos\PhilameterAPI\PhilameterAPI\PhilameterAPI\obj\Debug\netcoreapp1.1\PhilameterAPI.dll
+C:\Users\abowers\source\Repos\PhilameterAPI\PhilameterAPI\PhilameterAPI\obj\Debug\netcoreapp1.1\PhilameterAPI.pdb
