@@ -7,12 +7,18 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace PhilameterAPI.Controllers
 {
+    [Route("/")]
     public class RootController : Controller
     {
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok();
+            var result = new
+            {
+                href = "https://www.google.com" 
+            };
+
+            return Ok(result);
         }
     }
 }
