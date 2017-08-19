@@ -16,20 +16,38 @@ namespace PhilameterAPI
     public class Startup
     {
 
+        private readonly int _sslPort;
+        public IConfigurationRoot Configuration;
+
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddEnvironmentVariables();
 
-            builder.Build();
+            Configuration = builder.Build();
+
+            if (env.IsDevelopment())
+            {
+                var launchJsonConfigBuilder = new ConfigurationBuilder()
+                    .SetBasePath(env.ContentRootPath)
+                    .AddJsonFile("Properties\\launchSettings.json")
+                    .Build();
+
+                _sslPort = launchJsonConfigBuilder.GetValue<int>("iisSettings::iisExpress::sslPort");
+            }
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddMvc(opt =>
+            {
+                //require SSL for all controllers
+                opt.SslPort = _sslPort;
+                opt.Filters.Add(typeof(RequireHttpsAttribute));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

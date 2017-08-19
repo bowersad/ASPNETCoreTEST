@@ -10,12 +10,12 @@ namespace PhilameterAPI.Controllers
     [Route("/")]
     public class RootController : Controller
     {
-        [HttpGet]
-        public IActionResult Get()
+        [HttpGet(Name = nameof(GetRoot))]
+        public IActionResult GetRoot()
         {
             var result = new
             {
-                href = "https://www.google.com" 
+                href = Url.Link(nameof(GetRoot),null)
             };
 
             return Ok(result);
